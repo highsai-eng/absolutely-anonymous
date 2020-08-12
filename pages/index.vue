@@ -3,25 +3,16 @@
     <div>
       <logo />
       <h1 class="title">
-        absolutely-anonymous
+        匿名きぼんぬ
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+      <div class="search-area">
+        <v-text-field
+          placeholder="すれっどをタイトルとかタグとかで検索する"
+          prepend-inner-icon="mdi-search-web" />
+      </div>
+      <div class="button-area">
+        <v-btn text color="primary">検索する</v-btn>
+        <v-btn text color="primary">すれっどを投稿する</v-btn>
       </div>
     </div>
   </div>
@@ -73,7 +64,11 @@ export default {
   padding-bottom: 15px;
 }
 
-.links {
+.search-area {
+  padding-top: 15px;
+}
+
+.button-area {
   padding-top: 15px;
 }
 </style>
