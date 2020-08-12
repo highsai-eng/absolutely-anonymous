@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
+      <logo />
       <h1 class="title">
         absolutely-anonymous
       </h1>
@@ -28,7 +28,13 @@
 </template>
 
 <script>
-export default {}
+import Logo from '../components/Logo'
+
+export default {
+  components: {
+    Logo
+  }
+}
 </script>
 
 <style>
