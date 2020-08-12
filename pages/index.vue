@@ -11,8 +11,8 @@
           prepend-inner-icon="mdi-search-web" />
       </div>
       <div class="button-area">
-        <v-btn text color="primary">検索する</v-btn>
-        <v-btn text color="primary">すれっどを投稿する</v-btn>
+        <v-btn text color="primary" @click="search">検索する</v-btn>
+        <v-btn text color="primary" @click="createThread">すれっどを投稿する</v-btn>
       </div>
     </div>
   </div>
@@ -25,6 +25,14 @@ export default {
   layout: 'top',
   components: {
     Logo
+  },
+  methods: {
+    search() {
+      this.$router.push({name: 'thread'})
+    },
+    createThread() {
+      this.$router.push({name: 'thread-create'})
+    }
   }
 }
 </script>
