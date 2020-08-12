@@ -12,6 +12,7 @@
     "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {
+    "@nuxtjs/vuetify": "^1.11.2",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {}
