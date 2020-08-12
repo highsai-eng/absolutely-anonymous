@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        匿名きぼんぬ
+        絶対匿名きぼんぬ
       </h1>
       <div class="search-area">
         <v-text-field
@@ -22,6 +22,7 @@
 import Logo from '../components/Logo'
 
 export default {
+  layout: 'top',
   components: {
     Logo
   }
