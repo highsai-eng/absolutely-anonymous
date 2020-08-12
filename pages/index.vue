@@ -22,7 +22,6 @@
   import Logo from '../components/Logo'
 
   export default {
-    layout: 'top',
     components: {
       Logo
     },
