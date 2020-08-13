@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        絶対匿名きぼんぬ
+        匿名きぼんぬ
       </h1>
       <div class="search-area">
         <v-text-field
