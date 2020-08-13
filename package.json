@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build && yarn build:prepare:dist && yarn build:copy:server && yarn build:copy:client",
     "build:prepare:dist": "rm -rf dist && mkdir -p dist",
-    "build:copy:server": "rsync -a functions/ dist/server/ --exclude '/node_modules/' && cp -R .nuxt dist/server/",
+    "build:copy:server": "cp -R functions dist/server && cp -R .nuxt dist/server/",
     "build:copy:client": "cp -R static dist/client && cp -R .nuxt/dist/client/* dist/client",
     "start": "nuxt start",
     "generate": "nuxt generate",
