@@ -2,8 +2,8 @@ const functions = require('firebase-functions')
 const { Nuxt } = require('nuxt')
 
 const nuxt = new Nuxt({
-  buildDir: 'ssr',
-  dev: false
+  dev: false,
+  buildDir: '.nuxt'
 })
 
 exports.hanler = functions.https.onRequest(async (req, res) => {
