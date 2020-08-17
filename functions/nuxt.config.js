@@ -1,4 +1,5 @@
 
+// FIXME: clientのconfigと同期させる
 exports.nuxtConfig = {
   /*
   ** Nuxt rendering mode
@@ -58,6 +59,5 @@ exports.nuxtConfig = {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-  },
-  buildDIr: '.nuxt'
+  }
 }

@@ -58,6 +58,6 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-  },
-  buildDIr: '.nuxt'
+    analyze: true
+  }
 }

@@ -6,11 +6,11 @@
     "dev": "nuxt",
     "build": "nuxt build && yarn build:prepare:dist && yarn build:copy:server && yarn build:copy:client",
     "build:prepare:dist": "rm -rf dist && mkdir -p dist",
-    "build:copy:server": "cp -R functions dist/server && cp -R .nuxt dist/server/",
+    "build:copy:server": "cp -R .nuxt functions/",
     "build:copy:client": "cp -R static dist/client && cp -R .nuxt/dist/client/* dist/client",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "serve": "yarn build && cd dist/server && yarn serve && cd ../../",
+    "serve": "yarn build && cd functions && yarn serve && cd ../",
     "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {

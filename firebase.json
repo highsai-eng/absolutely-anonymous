@@ -9,7 +9,7 @@
     ]
   },
   "functions": {
-    "source": "dist/server"
+    "source": "functions"
   },
   "firestore": {
     "rules": "firestore.rules",
