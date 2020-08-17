@@ -10,7 +10,7 @@
     "build:copy:client": "cp -R static dist/client && cp -R .nuxt/dist/client/* dist/client",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "serve": "yarn build && cd functions && yarn serve && cd ../",
+    "serve": "yarn build && cd dist/server && yarn serve && cd ../../",
     "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {

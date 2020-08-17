@@ -1,5 +1,5 @@
 
-export default {
+exports.nuxtConfig = {
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode

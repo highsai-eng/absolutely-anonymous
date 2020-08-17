@@ -1,10 +1,10 @@
 const functions = require('firebase-functions')
 const { Nuxt } = require('nuxt')
+const nuxtConfig = require('../nuxt.config')
 
-const nuxt = new Nuxt({
-  dev: false,
-  buildDir: '.nuxt'
-})
+nuxtConfig.dev = false
+
+const nuxt = new Nuxt(nuxtConfig)
 
 exports.hanler = functions.https.onRequest(async (req, res) => {
   await nuxt.ready()
