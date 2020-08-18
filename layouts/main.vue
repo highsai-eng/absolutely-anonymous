@@ -2,6 +2,7 @@
   <div>
 
     <v-app id="inspire">
+
       <v-navigation-drawer app v-model="drawer" :clipped="$vuetify.breakpoint.lgAndUp">
         <v-list dense>
           <template v-for="item in items">
@@ -53,33 +54,38 @@
           </template>
         </v-list>
       </v-navigation-drawer>
+
+      <v-app-bar app :clipped-left="$vuetify.breakpoint.lgAndUp">
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
+          <span class="hidden-sm-and-down">匿名きぼんぬ</span>
+        </v-toolbar-title>
+        <v-text-field
+          hide-details
+          placeholder="すれっどをタイトルとかタグとかで検索"
+          prepend-inner-icon="mdi-magnify"
+          class="hidden-sm-and-down" />
+        <v-spacer></v-spacer>
+        <v-btn icon>
+          <v-icon>mdi-apps</v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-bell</v-icon>
+        </v-btn>
+        <v-btn icon large>
+          <v-avatar size="32px" item>
+            <v-img src="https://cdn.vuetifyjs.com/images/logos/logo.svg" alt="Vuetify"></v-img>
+          </v-avatar>
+        </v-btn>
+      </v-app-bar>
+
+      <v-main>
+        <v-container class="grey lighten-5 main-container">
+          <nuxt />
+        </v-container>
+      </v-main>
+
     </v-app>
-
-    <v-app-bar app color="primary" :clipped-left="$vuetify.breakpoint.lgAndUp">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
-        <span class="hidden-sm-and-down">匿名きぼんぬ</span>
-      </v-toolbar-title>
-      <v-text-field
-        hide-details
-        placeholder="すれっどをタイトルとかタグとかで検索"
-        prepend-inner-icon="mdi-magnify"
-        class="hidden-sm-and-down" />
-      <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-apps</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-bell</v-icon>
-      </v-btn>
-      <v-btn icon large>
-        <v-avatar size="32px" item>
-          <v-img src="https://cdn.vuetifyjs.com/images/logos/logo.svg" alt="Vuetify"></v-img>
-        </v-avatar>
-      </v-btn>
-    </v-app-bar>
-
-    <nuxt />
 
   </div>
 </template>
@@ -91,36 +97,6 @@
         drawer: null,
         items: [
           { icon: 'mdi-help-circle', text: 'へるぷ'}
-          // { icon: 'mdi-contacts', text: 'Contacts' },
-          // { icon: 'mdi-history', text: 'Frequently contacted' },
-          // { icon: 'mdi-content-copy', text: 'Duplicates' },
-          // {
-          //   icon: 'mdi-chevron-up',
-          //   'icon-alt': 'mdi-chevron-down',
-          //   text: 'Labels',
-          //   model: true,
-          //   children: [
-          //     { icon: 'mdi-plus', text: 'Create label' },
-          //   ],
-          // },
-          // {
-          //   icon: 'mdi-chevron-up',
-          //   'icon-alt': 'mdi-chevron-down',
-          //   text: 'More',
-          //   model: false,
-          //   children: [
-          //     { text: 'Import' },
-          //     { text: 'Export' },
-          //     { text: 'Print' },
-          //     { text: 'Undo changes' },
-          //     { text: 'Other contacts' },
-          //   ],
-          // },
-          // { icon: 'mdi-cog', text: 'Settings' },
-          // { icon: 'mdi-message', text: 'Send feedback' },
-          // { icon: 'mdi-help-circle', text: 'Help' },
-          // { icon: 'mdi-cellphone-link', text: 'App downloads' },
-          // { icon: 'mdi-keyboard', text: 'Go to the old version' },
         ]
       }
     }
@@ -152,5 +128,9 @@
   *::after {
     box-sizing: border-box;
     margin: 0;
+  }
+
+  .main-container {
+    padding: 12px 40px;
   }
 </style>

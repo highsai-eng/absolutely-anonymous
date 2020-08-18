@@ -1,7 +1,5 @@
 <template>
-  <div>
-    スレッド投稿
-  </div>
+  <div>aa</div>
 </template>
 
 <script>
