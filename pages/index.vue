@@ -59,7 +59,7 @@
       sans-serif;
     display: block;
     font-weight: 300;
-    font-size: 100px;
+    font-size: 80px;
     color: #35495e;
     letter-spacing: 1px;
   }
